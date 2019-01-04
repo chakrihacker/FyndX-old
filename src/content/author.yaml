@@ -13,3 +13,10 @@
   website: https://ghost.org/
   location: On a plane
   profile_image: img/alex-knight-326705-unsplash.jpg
+- id: Subramanya Chakravarthy
+  avatar: avatars/chakrihacker.jpg
+  location: Bengaluru, India
+  facebook: chakrihacker
+  twitter: chakrihacker
+  # profile_image: img/chakrihacker-profile.jpeg
+  bio: Hi 👋 I'm Chakravarthy, a geek and an ambitious developer passionate about new technology and it's capabilities. I live in Bangalore, India which is also known as India's Silicon Valley. I am mostly into speaking at conferences or meetups and writing stuff.
