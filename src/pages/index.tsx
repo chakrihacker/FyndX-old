@@ -147,6 +147,7 @@ const IndexPage: React.FunctionComponent<IndexProps> = props => {
           <div className={`${inner}`}>
             <div className={`${PostFeed} ${PostFeedRaise}`}>
               {props.data.allMarkdownRemark.edges.map(post => {
+                console.log(post);
                 return <PostCard key={post.node.fields.slug} post={post.node} />;
               })}
             </div>
@@ -182,7 +183,11 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(limit: 1000, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      limit: 1000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { layout: { eq: "post" } } }
+    ) {
       edges {
         node {
           timeToRead

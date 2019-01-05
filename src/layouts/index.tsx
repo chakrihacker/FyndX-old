@@ -1,6 +1,8 @@
 import { injectGlobal } from 'emotion';
 import { darken, lighten } from 'polished';
 import * as React from 'react';
+require('prism-themes/themes/prism-atom-dark.css');
+require('./main.css');
 
 import { colors } from '../styles/colors';
 
@@ -174,7 +176,9 @@ mark {
 }
 code,
 kbd,
-pre,
+pre {
+  overflow: auto;
+},
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
