@@ -1,8 +1,8 @@
 import { Link } from 'gatsby';
 import { setLightness } from 'polished';
 import * as React from 'react';
-import styled from '@emotion/styled'
-import { css } from 'emotion'
+import styled from '@emotion/styled';
+import { css } from 'emotion';
 
 import { colors } from '../styles/colors';
 import { outer, inner } from '../styles/shared';
@@ -11,9 +11,13 @@ import config from '../website-config';
 const SiteFooter = css`
   position: relative;
   padding-top: 20px;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   color: #fff;
-  background: ${setLightness('0.0015', colors.darkgrey)};
+  align-items: center;
+  // background: ${setLightness('0.0015', colors.darkgrey)};
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  background-size: cover;
 `;
 
 const SiteFooterContent = css`
@@ -22,7 +26,7 @@ const SiteFooterContent = css`
   justify-content: space-between;
   align-items: center;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   a {
     color: rgba(255, 255, 255, 0.7);
   }
@@ -73,7 +77,7 @@ const Footer: React.FunctionComponent = () => {
           <Link to="/">{config.title}</Link> &copy; {new Date().getFullYear()}
         </section>
         <SiteFooterNav>
-          <Link to="/">Latest Posts</Link>
+          {/* <Link to="/">Latest Posts</Link> */}
           {config.facebook && (
             <a href={config.facebook} target="_blank" rel="noopener noreferrer">
               Facebook
@@ -84,10 +88,6 @@ const Footer: React.FunctionComponent = () => {
               Twitter
             </a>
           )}
-
-          <a href="https://ghost.org" target="_blank" rel="noopener noreferrer">
-            Ghost
-          </a>
 
           <Link to="/rss.xml">RSS</Link>
         </SiteFooterNav>
