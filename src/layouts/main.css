@@ -1,11 +1,15 @@
 /* @import url('https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-dark.min.css'); */
 
-[itemprop='articleSection'] li::before {
-  content: '';
-  left: 17px;
-  margin-top: 11px;
-  position: absolute;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  border-left: 6px solid #efbb35;
+.post-content {
+  position: relative;
+}
+
+.gatsby-highlight-code-line {
+  background-color: #5a4e28;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
 }

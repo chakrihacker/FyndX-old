@@ -10,7 +10,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   // trip up. An empty string is still required in replacement to `null`.
   switch (node.internal.type) {
     case 'MarkdownRemark': {
-      const { permalink, layout, primaryTag } = node.frontmatter;
+      const { permalink, layout, primaryTag, category } = node.frontmatter;
       const { relativePath } = getNode(node.parent);
 
       let slug = permalink;
@@ -37,6 +37,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         node,
         name: 'primaryTag',
         value: primaryTag || '',
+      });
+
+      createNodeField({
+        node,
+        name: 'category',
+        value: category || '',
       });
     }
   }

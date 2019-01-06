@@ -47,7 +47,7 @@ an example of the typical markdown for a post:
 
 ```bash
 ---
-layout: page-fullwidth
+layout: page
 title:  "Using JavaScript to Make Crispy Bacon"
 categories:
     - js

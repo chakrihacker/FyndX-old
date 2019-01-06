@@ -485,7 +485,7 @@ export const PostFullContent = styled.section`
   li {
     :before {
       content: "";
-      left: 17px;
+      left: 12px;
       margin-top: 11px;
       position: absolute;
       border-top: 6px solid transparent;
