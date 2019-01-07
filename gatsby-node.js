@@ -10,7 +10,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   // trip up. An empty string is still required in replacement to `null`.
   switch (node.internal.type) {
     case 'MarkdownRemark': {
-      const { permalink, layout, primaryTag, category } = node.frontmatter;
+      const { permalink, layout, primaryTag, category, image } = node.frontmatter;
       const { relativePath } = getNode(node.parent);
 
       let slug = permalink;
@@ -149,7 +149,7 @@ exports.createPages = async ({ graphql, actions }) => {
   );
   tags.forEach(tag => {
     createPage({
-      path: `/tags/${_.kebabCase(tag)}/`,
+      path: `/${_.kebabCase(tag)}/`,
       component: tagTemplate,
       context: {
         tag,

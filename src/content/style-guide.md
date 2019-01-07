@@ -4,6 +4,7 @@ title: Fyndx.io Style Guide
 author: Subramanya Chakravarthy
 date: 2019-01-04
 tags: []
+image: 'img/demo1.jpg'
 ---
 
 Here’s a style guide for posts on Fyndx.io. The first paragraph of each post is

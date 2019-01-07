@@ -3,14 +3,14 @@ import Img from 'gatsby-image';
 import * as _ from 'lodash';
 import { lighten } from 'polished';
 import * as React from 'react';
-import styled from '@emotion/styled'
-import { css } from 'emotion'
+import styled from '@emotion/styled';
+import { css } from 'emotion';
 
 import { colors } from '../styles/colors';
 import { PageContext } from '../templates/post';
 
 const PostCardStyles = css`
-  flex: 1 1 300px;
+  flex: 0 1 300px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -202,14 +202,13 @@ const PostCard: React.FunctionComponent<PostCardProps> = ({ post }) => {
       {post.frontmatter.image && (
         <Link className={`${PostCardImageLink} post-card-image-link`} to={post.fields.slug}>
           <PostCardImage className="post-card-image">
-            {post.frontmatter.image &&
-              post.frontmatter.image.childImageSharp.fluid && (
-                <Img
-                  alt={`${post.frontmatter.title} cover image`}
-                  style={{ height: '100%' }}
-                  fluid={post.frontmatter.image.childImageSharp.fluid}
-                />
-              )}
+            {post.frontmatter.image && post.frontmatter.image.childImageSharp.fluid && (
+              <Img
+                alt={`${post.frontmatter.title} cover image`}
+                style={{ height: '100%' }}
+                fluid={post.frontmatter.image.childImageSharp.fluid}
+              />
+            )}
           </PostCardImage>
         </Link>
       )}
