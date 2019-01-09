@@ -103,9 +103,7 @@ An example where we define a `getBacon` function...
 
 ## Fyndx Vocabulary
 
-Here are some ideas for Alligator-related words, as options to use for variable names instead of the traditional foo, bar & baz: **nest, eggs, bite, gator, grip, belly, jaw, reptilian, meat, tail, crocodilian, bayou, gator, cayman**.
-
-Foods and animal names are also good options for words to use.
+Use Foods and animal name as variable names instead of the traditional foo, bar & baz:
 
 ## Bullet Points
 
@@ -134,16 +132,18 @@ Here are a few rules for code snippets:
 
 Markup your code snippets like this:
 
+<!-- prettier-ignore-start -->
+
+````java
 ```javascript
-<pre><code class="javascript">let alligator = true;
+let isPanda = true;
 
-if (alligator) {
-  console.log('It bites!');
+if (isPanda) {
+  console.log('It sleeps!');
 }
-
-// ...
-</code></pre>
 ```
+````
+<!-- prettier-ignore-end -->
 
 For markup that includes html markup, you can use the ``` syntax and the html entities will be converted automatically:
 
@@ -153,7 +153,6 @@ For markup that includes html markup, you can use the ``` syntax and the html en
 <input type="text" />
 <button type="submit"></button>
 ```
-
 ````
 
 Breakdown long lines of code or markup:
@@ -170,7 +169,7 @@ Breakdown long lines of code or markup:
 </button>
 
 <!-- Or even this -->
-<button mat-icon-button 
+<button mat-icon-button
     [mat-menu-trigger-for]="menu">
   <mat-icon>more_vert</mat-icon>
 </button>
@@ -181,10 +180,12 @@ Breakdown long lines of code or markup:
 
 For terminal commands, let’s prepend each command with \$:
 
-````
+````bash
+
 ```bash
 $ yard add react react-dom
 ```
+
 ````
 
 ```bash
@@ -196,20 +197,20 @@ $ yard add react react-dom
 You can highlight specific sections of code by wrapping it in a _span_ with the _code-annotation_ class:
 
 ```
-let alligator = true;
+let isPanda = true;
 
-if (alligator) {
-  <span class="code-annotation">console.log('It bites!');</span>
+if (isPanda) {
+  <span class="code-annotation">console.log('It sleeps!');</span>
 }
 ```
 
 And here’s the result:
 
 ```javascript{4}
-let alligator = true;
+let isPanda = true;
 
-if (alligator) {
-  console.log('It bites!');
+if (isPanda) {
+  console.log('It sleeps!');
 }
 ```
 
@@ -353,3 +354,9 @@ If you have one last funny or insightful thought for the post, it can be include
 ## Some Fun Emojis
 
 🐊 🦄 🤓 🎩 👉 🌵 ☠ 💣 🐼 💪 🐷 ✨ 🚀 🌈 🐸 🐙 😷 😍 🤖 👽 🐥 🐢 🐟 🐿 🐪 🐻 🚣‍
+
+```
+
+```
+
+This style guide is mostly inspired from alligator.io
