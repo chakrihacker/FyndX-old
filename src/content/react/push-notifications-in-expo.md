@@ -4,9 +4,9 @@ title: React Native Push Notifications using Expo 🔔
 description: How to use Push Notifications in React Native.
 author: Subramanya Chakravarthy
 date: 2018-11-24
-category: react-native
+category: react
 tags:
-  - react-native
+  - react
 ---
 
 The architecture for server based notifications is:

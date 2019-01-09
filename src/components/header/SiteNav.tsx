@@ -17,7 +17,7 @@ const SiteNavStyles = css`
   justify-content: space-between;
   align-items: flex-start;
   overflow-y: hidden;
-  height: 40px;
+  height: 50px;
   font-size: 1.5rem;
 `;
 
@@ -28,7 +28,7 @@ const SiteNavLeft = styled.div`
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   margin-right: 10px;
-  padding-bottom: 80px;
+  // padding-bottom: 80px;
   letter-spacing: 0.4px;
   white-space: nowrap;
 
@@ -113,14 +113,19 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
     return (
       <nav className={`${SiteNavStyles}`}>
         <SiteNavLeft>
-          {!isHome && <SiteNavLogo />}
           <ul className={`${NavStyles}`} role="menu">
             {/* TODO: mark current nav item - add class nav-current */}
+            {!isHome && (
+              <li role="menuitem">
+                {' '}
+                <SiteNavLogo />
+              </li>
+            )}
             <li role="menuitem">
               <Link to="/javascript">JavaScript</Link>
             </li>
             <li role="menuitem">
-              <Link to="/react-native">React Native</Link>
+              <Link to="/react">React</Link>
             </li>
             <li role="menuitem">
               <Link to="/about">About</Link>

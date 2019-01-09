@@ -135,6 +135,7 @@ interface PageTemplateProps {
       frontmatter: {
         title: string;
         date: string;
+        description: string;
         userDate: string;
         image: {
           childImageSharp: {
@@ -190,6 +191,7 @@ export interface PageContext {
     };
     title: string;
     date: string;
+    description: string;
     tags: string[];
     author: {
       id: string;
@@ -218,9 +220,9 @@ const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
     <IndexLayout className="post-template">
       <Helmet>
         <html lang={config.lang} />
-        <title>{post.frontmatter.title}</title>
+        <title>{post.frontmatter.title} | FyndX.io</title>
 
-        <meta name="description" content={post.excerpt} />
+        <meta name="description" content={post.frontmatter.description} />
         <meta property="og:site_name" content={config.title} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.frontmatter.title} />
@@ -339,7 +341,7 @@ export default PageTemplate;
 
 export const query = graphql`
   query($slug: String, $primaryTag: String) {
-    logo: file(relativePath: { eq: "img/ghost-logo.png" }) {
+    logo: file(relativePath: { eq: "img/fyndx-logo.png" }) {
       childImageSharp {
         fixed {
           ...GatsbyImageSharpFixed
@@ -356,6 +358,7 @@ export const query = graphql`
         userDate: date(formatString: "D MMMM YYYY")
         date
         tags
+        description
         image {
           childImageSharp {
             fluid(maxWidth: 3720) {

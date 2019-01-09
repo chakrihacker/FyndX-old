@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-casper",
-  "description": "Casper for gatsby",
-  "version": "0.0.0",
+  "name": "fyndx",
+  "description": "Fyndx Official Website",
+  "version": "0.1.0",
   "private": true,
-  "author": "Scott Cooper <scttcper@gmail.com>",
+  "author": "Subramanya Chakravarthy <subramanya@fyndx.io>",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

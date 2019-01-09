@@ -5,10 +5,10 @@ description: How to use FlatList in React Native.
 # image: someImagePath
 author: Subramanya Chakravarthy
 date: 2018-10-16
-category: react-native
+category: react
 draft: false
 tags:
-  - react-native
+  - react
 ---
 
 If you have a list of data like Facebook feed or YouTube like infinite list of videos, the most performant way to render in react-native is only by using FlatList.

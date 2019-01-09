@@ -162,7 +162,7 @@ const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
     <IndexLayout className="post-template">
       <Helmet>
         <html lang={config.lang} />
-        <title>{post.frontmatter.title}</title>
+        <title>{post.frontmatter.title} | FyndX.io</title>
 
         <meta name="description" content={post.excerpt} />
         <meta property="og:site_name" content={config.title} />
@@ -239,7 +239,7 @@ export default PageTemplate;
 
 export const query = graphql`
   query($slug: String, $primaryTag: String) {
-    logo: file(relativePath: { eq: "img/ghost-logo.png" }) {
+    logo: file(relativePath: { eq: "img/fyndx-logo.png" }) {
       childImageSharp {
         fixed {
           ...GatsbyImageSharpFixed

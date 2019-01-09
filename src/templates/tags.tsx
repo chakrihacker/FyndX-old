@@ -62,9 +62,7 @@ const Tags: React.FunctionComponent<TagTemplateProps> = props => {
     <IndexLayout>
       <Helmet>
         <html lang={config.lang} />
-        <title>
-          {tag} - {config.title}
-        </title>
+        <title>Posts about {tag.toUpperCase()} - FyndX.io</title>
         <meta
           name="description"
           content={tagData && tagData.node ? tagData.node.description : ''}
@@ -97,7 +95,7 @@ const Tags: React.FunctionComponent<TagTemplateProps> = props => {
           <SiteNav isHome={false} />
           <div className={`${inner}`}>
             <SiteHeaderContent>
-              <SiteTitle>{tag}</SiteTitle>
+              <SiteTitle>{tag.toUpperCase()}</SiteTitle>
               <SiteDescription>
                 {tagData && tagData.node.description ? (
                   tagData.node.description

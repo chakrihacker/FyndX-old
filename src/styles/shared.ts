@@ -32,10 +32,12 @@ export const SiteDescription = styled.h2`
   z-index: 10;
   margin: 0;
   padding: 5px 0;
-  font-size: 2.2rem;
+  font-size: 3em;
   font-weight: 300;
   letter-spacing: 0.5px;
   opacity: 0.8;
+  font-family: 'IBM Plex Mono ExtraLight';
+  font-style: italic;
 `;
 
 export const PostFeed = css`
@@ -89,7 +91,7 @@ export const SiteHeaderContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10vw 4vw;
+  padding: 4vw 4vw 12vw 4vw;
   min-height: 200px;
   max-height: 450px;
   text-align: center;

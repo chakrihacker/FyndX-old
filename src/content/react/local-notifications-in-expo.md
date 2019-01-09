@@ -4,9 +4,9 @@ title: React Native Local Notifications In Expo
 description: How to send Local Notifications in React Native using expo.
 author: Subramanya Chakravarthy
 date: 2018-11-20
-category: react-native
+category: react
 tags:
-  - react-native
+  - react
 ---
 
 Notifications provide **short**, **timely** information about events in your app while it's not in use. Every app wants it users to engage with their app for more time. I think Notifications are the best way to remind user gently about the presence and provide some actionable stuff like If the app is based about workouts, you can remind user not to loose streak.

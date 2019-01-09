@@ -26,14 +26,19 @@ export interface WebsiteConfig {
    * this is the hidden input field name
    */
   mailchimpName?: string;
+  /**
+   * shortname for manifest. MUST be shorter than 12 characters
+   */
+  shortName: string;
 }
 
 const config: WebsiteConfig = {
   title: 'Fyndx',
   description: 'Fynd best articles for development',
   coverImage: 'img/blog-cover.jpg',
-  logo: 'img/ghost-logo.png',
+  logo: 'img/fyndx-logo.png',
   lang: 'en',
+  shortName: 'FyndX',
   siteUrl: 'https://fyndx.io',
   facebook: 'https://www.facebook.com/chakrihacker',
   twitter: 'https://twitter.com/chakrihacker',
