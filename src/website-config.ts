@@ -44,8 +44,8 @@ const config: WebsiteConfig = {
   twitter: 'https://twitter.com/chakrihacker',
   showSubscribe: true,
   mailchimpAction:
-    'https://twitter.us19.list-manage.com/subscribe/post?u=a89b6987ac248c81b0b7f3a0f&amp;id=7d777b7d75',
-  mailchimpName: 'b_a89b6987ac248c81b0b7f3a0f_7d777b7d75',
+    'https://fyndx.us20.list-manage.com/subscribe/post?u=b37c6197dc44c17aadd03cc2f&amp;id=3611a1392a',
+  mailchimpName: 'b_b37c6197dc44c17aadd03cc2f_3611a1392a',
 };
 
 export default config;
