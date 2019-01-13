@@ -143,8 +143,8 @@ export const PostFullContent = styled.section`
 
   blockquote {
     margin: 0 0 1.5em;
-    padding: 0 1.5em;
-    border-left: #3eb0ef 3px solid;
+    padding: 0 0.8em;
+    border-left: #fae042 4px solid;
   }
 
   blockquote p {
@@ -180,7 +180,7 @@ export const PostFullContent = styled.section`
     /* border: color(var(--darkgrey) l(-10%)) 1px solid; */
     border: ${darken('0.01', colors.darkgrey)} 1px solid;
     color: ${colors.whitegrey};
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     line-height: 1.5em;
     /* background: color(var(--darkgrey) l(-3%)); */
     background: ${darken('0.03', colors.darkgrey)};
@@ -394,7 +394,7 @@ export const PostFullContent = styled.section`
   }
 
   /* OverRides */
-  p:first-of-type {
+  .post-content > p:first-of-type {
     border-left: 4px solid #fae042;
     padding-left: 0.8em;
     text-align: justify;
