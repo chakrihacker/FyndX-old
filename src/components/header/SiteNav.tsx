@@ -36,7 +36,7 @@ const SiteNavLeft = styled.div`
 
   @media (max-width: 700px) {
     margin-right: 0;
-    padding-left: 4vw;
+    // padding-left: 4vw;
   }
 `;
 

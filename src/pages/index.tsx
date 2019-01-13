@@ -123,7 +123,7 @@ const IndexPage: React.FunctionComponent<IndexProps> = props => {
       <Wrapper>
         <header
           className={`${SiteHeader} ${outer}`}
-          style={{ clipPath: 'polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0)' }}
+          // style={{ clipPath: 'polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0)' }}
         >
           <SiteNav isHome={true} />
           <div className={`${inner}`}>

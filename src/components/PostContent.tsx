@@ -423,8 +423,8 @@ export const PostFullContent = styled.section`
       top: -1rem;
       font-weight: 700;
       // font-size: 1.4rem;
-      -webkit-clip-path: polygon(50% 0,0 100%,100% 100%);
-      clip-path: polygon(50% 0,0 100%,100% 100%);
+      // -webkit-clip-path: polygon(50% 0,0 100%,100% 100%);
+      // clip-path: polygon(50% 0,0 100%,100% 100%);
       left: -1.8rem !important; 
     }
   }
