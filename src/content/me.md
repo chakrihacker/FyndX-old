@@ -2,6 +2,7 @@
 layout: page
 title: Subramanya Chakravarthy
 author: Subramanya Chakravarthy
+tags: []
 ---
 
 Hi 👋 I'm Chakravarthy, a _geek_ and an **ambitious developer** passionate about
