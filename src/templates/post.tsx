@@ -6,6 +6,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { css } from 'emotion';
 import { Helmet } from 'react-helmet';
+import { DiscussionEmbed } from 'disqus-react';
 
 import AuthorCard from '../components/AuthorCard';
 import Footer from '../components/Footer';
@@ -127,7 +128,13 @@ interface PageTemplateProps {
         fixed: any;
       };
     };
+    site: {
+      siteMetadata: {
+        title: string;
+      };
+    };
     markdownRemark: {
+      id: string;
       html: string;
       htmlAst: any;
       excerpt: string;
@@ -215,6 +222,12 @@ const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
     width = post.frontmatter.image.childImageSharp.fluid.sizes.split(', ')[1].split('px')[0];
     height = String(Number(width) / post.frontmatter.image.childImageSharp.fluid.aspectRatio);
   }
+
+  const disqusShortname = 'fyndx';
+  const disqusConfig = {
+    identifier: post.id,
+    title: post.frontmatter.title,
+  };
 
   return (
     <IndexLayout className="post-template">
@@ -307,6 +320,9 @@ const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
               )}
               <PostContent htmlAst={post.htmlAst} />
 
+              {/* Disqus Comments */}
+              <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+
               {/* The big email subscribe modal content */}
               {config.showSubscribe && <Subscribe title={config.title} />}
 
@@ -346,6 +362,11 @@ export const query = graphql`
         fixed {
           ...GatsbyImageSharpFixed
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
