@@ -71,8 +71,8 @@
     "tslint-config-blvd": "1.2.1",
     "tslint-config-prettier": "1.17.0",
     "tslint-plugin-prettier": "2.0.1",
+    "typescript": "3.3.3"
     "tslint-xo": "0.14.0",
-    "typescript": "3.2.2"
   },
   "engines": {
     "node": ">=8.0.0"
