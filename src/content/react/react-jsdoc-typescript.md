@@ -23,15 +23,20 @@ And add the following content
 
 <p class="file-desc"><span>jsconfig.json</span></p>
 
-```json
+```json{7}
 {
-  "exclude": ["node_modules", "**/node_modules/*"],
+  "exclude": ["node_modules", "**/node_modules/*"], // God Please exclude node_modules
+  // options to explain how to compile js files
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "target": "es2015",
-    "checkJs": true,
-    "jsx": "react",
+    "allowSyntheticDefaultImports": true, // don't mark js files that does not contain export default as error
+    "target": "es2015", // which library to use
+    "checkJs": true, // report errors in js files
+    "jsx": "react", // if you are using react
     "module": "commonjs"
   }
 }
 ```
+
+Did you see the highlighted line `"checkJs": true` that says vs code to check all JavaScript files in the project folder.
+
+If you want to check whether it's working or not comment out `"jsx": react` and open any file with react. you will see error saying cannot use jsx unless _jsx flag_ is provided.
